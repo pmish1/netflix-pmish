@@ -2,11 +2,11 @@ import React from 'react'
 
 import './HomeScreen.css'
 
-import Nav from './Nav.js'
-import Banner from './Banner'
-import Row from './Row.js'
+import Nav from '../Nav.js'
+import Banner from '../Banner'
+import Row from '../Row.js'
 
-import requests from './Requests'
+import requests from '../Requests'
 
 function HomeScreen() {
   return (
@@ -14,14 +14,19 @@ function HomeScreen() {
         <Nav />
         <Banner />
         <Row 
-            title="Trending now"
+            title="Netflix Originals"
             fetchUrl={requests.fetchNetflixOriginals}
             isLargeRow
+        />
+        <Row 
+            title="Trending"
+            fetchUrl={requests.fetchTrending}
+            // isLargeRow
         />
          <Row 
             title="Top Rated"
             fetchUrl={requests.fetchTopRated}
-            isLargeRow
+            // isLargeRow
         />
          <Row 
             title="Action Movies"
@@ -31,12 +36,12 @@ function HomeScreen() {
          <Row 
             title="Comedy Movies"
             fetchUrl={requests.fetchComedyMovies}
-            isLargeRow
+            // isLargeRow
         />
          <Row 
             title="Horror Movies"
             fetchUrl={requests.fetchHorrorMovies}
-            isLargeRow
+            // isLargeRow
         />
          <Row 
             title="Romance Movies "
@@ -46,8 +51,9 @@ function HomeScreen() {
          <Row 
             title="Documentaries"
             fetchUrl={requests.fetchDocumentaries}
-            isLargeRow
+            // isLargeRow
         />
+       
     </div>
   )
 }
