@@ -19,7 +19,7 @@ function Row({title, fetchUrl, isLargeRow = false}) {   //by default islargeRow 
         fetchData()
     }, [])
 
-    console.log(movies)
+    // console.log(movies)
 
   return (
     <div className="row">
