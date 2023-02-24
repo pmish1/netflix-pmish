@@ -20,3 +20,7 @@
     cursor: pointer;
     border: none;
 }
+
+.plansScreen__plan--disabled > button {
+    background-color: grey !important;
+}
